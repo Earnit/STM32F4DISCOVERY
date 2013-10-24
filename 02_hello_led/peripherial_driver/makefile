@@ -4,8 +4,8 @@ OBJCOPY = $(TOOLS_PREFIX)objcopy
 AR = $(TOOLS_PREFIX)ar
 
 CFLAGS  = -g -O0 -Wall -nostdlib 
-CFLAGS += -mcpu=cortex-m4 -mthumb -mlittle-endian
-CFLAGS += -mthumb-interwork -mfloat-abi=hard -mfpu=fpv4-sp-d16 -ffreestanding
+CFLAGS += -mcpu=cortex-m4 -mlittle-endian -mthumb -mthumb-interwork
+CFLAGS += -mfloat-abi=hard -mfpu=fpv4-sp-d16 -ffreestanding
 CFLAGS += -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER
 
 INCLUDE = -Iinc -I../CMSIS/inc
